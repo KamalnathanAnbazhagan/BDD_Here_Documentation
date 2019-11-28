@@ -6,11 +6,10 @@ import cucumber.api.junit.Cucumber;
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src/test/java/Features",
- //dryRun=true
-glue={"src/main/java/StepDefinition"}
+features = "src/test/java/Features"
+,glue= {"src/test/java/StepDefinitions"}
 ,tags= {"@SmokeTest"}
-
+,dryRun =false
  )
  
 public class TestRunner {
